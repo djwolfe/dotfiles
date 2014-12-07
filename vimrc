@@ -17,3 +17,4 @@ filetype plugin indent on    " required
 
 set mouse=a
 set t_Co=256
+syntax on
