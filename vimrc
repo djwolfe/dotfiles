@@ -18,3 +18,17 @@ filetype plugin indent on    " required
 set mouse=a
 set t_Co=256
 syntax on
+
+
+set et
+set ts=2
+set sw=2
+set hlsearch
+
+function! StartUp()
+  if 0 == argc()
+    NERDTree
+  end
+endfunction
+
+autocmd VimEnter * call StartUp()
