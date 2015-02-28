@@ -10,8 +10,9 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic.git'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,6 +27,7 @@ set et
 set ts=2
 set sw=2
 set hlsearch
+set incsearch
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -36,3 +38,7 @@ function! StartUp()
 endfunction
 
 autocmd VimEnter * call StartUp()
+autocmd FileType php setlocal tabstop=4 shiftwidth=4
+
+colorscheme molokai
+
