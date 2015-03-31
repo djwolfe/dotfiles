@@ -10,14 +10,20 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-rails'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic.git'
-" Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
+Plugin 'will133/vim-dirdiff'
+Plugin 'mileszs/ack.vim'
+Plugin 'fholgado/minibufexpl.vim'
+
+" run :PluginInstall
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+set dir=~/tmp
 set mouse=a
 set t_Co=256
 syntax on
@@ -29,7 +35,9 @@ set sw=2
 set hlsearch
 set incsearch
 
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
+let g:ackprg = 'ack-grep'
+let g:miniBufExplUseSingleClick = 1
 
 function! StartUp()
   if 0 == argc()
