@@ -15,7 +15,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'will133/vim-dirdiff'
 Plugin 'mileszs/ack.vim'
-Plugin 'fholgado/minibufexpl.vim'
+" Plugin 'fholgado/minibufexpl.vim'
+Plugin 'tpope/vim-surround'
 
 " run :PluginInstall
 
@@ -34,6 +35,10 @@ set ts=2
 set sw=2
 set hlsearch
 set incsearch
+
+" Don't let active window get too small
+set winwidth=40
+set winheight=20
 
 " let g:airline#extensions#tabline#enabled = 1
 let g:ackprg = 'ack-grep'
